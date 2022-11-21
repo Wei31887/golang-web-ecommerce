@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif TC", serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+header {
+  display: flex;
+  width: 100vw;
+  height: 100px;
+  align-items: center;
+  flex-wrap: wrap;
+  text-indent: 1rem;
+  font-weight: bold;
+}
+header div.title {
+  padding-left: 1rem;
+  flex: 5 1 400px;
+  display: flex;
+  align-items: center;
+}
+header div.title img {
+  flex-direction: column;
+  width: 6vw;
+  height: 6vw;
+}
+header nav {
+  flex: 2 1 400px;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav ul li {
+  flex-direction: column;
+  list-style-type: none;
+}
+header nav ul li a {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.35rem;
+  color: rgb(3, 127, 127);
+  transition: all 0.1s ease;
+}
+header nav ul li a:hover {
+  color: rgb(6, 4, 118);
+}
+
+@media screen and (max-width: 500px) {
+  div.title img {
+    width: 50px;
+    min-height: 50px;
+  }
+}/*# sourceMappingURL=login.css.map */

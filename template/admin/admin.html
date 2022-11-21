@@ -1,0 +1,37 @@
+{{ define "admin" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/login.css">
+    <title>I Market</title>
+</head>
+<body>
+    <header>
+        <nav>
+            {{ template "nav" .}}
+        </nav>
+    </header>
+    <main>
+        <section class="editProduct">
+            <form enctype="multipart/form-data" action="/admin/uploadproduct" method="POST">
+                Product name<input type="text" name="title" />
+                Price<input type="text" name="price" />
+                Stock<input type="text" name="stock" />
+                Sale<input type="text" name="sale" />
+                Product image<input type="file" name="image" />
+                <button>Submit</button>
+              </form>
+        </section>
+        <section class="product">
+            <h1>Products</h1>
+            {{range .}}
+                <img src="/public/products/{{.}}" width="400px">
+            {{end}}
+        </section>
+    </main>
+</body>
+</html>
+{{ end }}
